@@ -29,5 +29,12 @@ int main() {
         return 1;
     }
 
+    int opt = 0;
+    do {
+        menu();
+        scanf("%d", &opt);
+
+    } while (opt != 9);
+
     return 0;
 }
