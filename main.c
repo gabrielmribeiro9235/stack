@@ -20,6 +20,8 @@ void menu() {
 int main() {
     int stack_size;
 
+    printf("-----------------------------------------------\n");
+
     printf("Enter the maximum initial stack size: ");
     scanf("%d", &stack_size);
 
