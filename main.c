@@ -57,6 +57,20 @@ int main() {
 
                 break;
             }
+            case 3: {
+                printf("-----------------------------------------------\n");
+                int popped_value;
+
+                int pop_status = pop(stack, &popped_value);
+
+                if (pop_status == 1) {
+                    printf("Popped value: %d\n", popped_value);
+                } else {
+                    printf("Failed to pop\n");
+                }
+
+                break;
+            }
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
