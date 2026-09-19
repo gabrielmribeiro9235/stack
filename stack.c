@@ -94,3 +94,18 @@ int is_full(t_stack *stack) {
 int size(t_stack *stack) {
     return stack == NULL ? 0 : stack->top_index + 1;
 }
+
+void print(t_stack *stack) {
+    if (is_empty(stack)) {
+        printf("The stack is empty\n");
+        return;
+    }
+
+    for (int i = stack->top_index; i >= 0; i--) {
+        if (i == stack->top_index) {
+            printf("%d <- top\n", stack->items[i]);
+        } else {
+            printf("%d\n", stack->items[i]);
+        }
+    }
+}
