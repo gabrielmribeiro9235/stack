@@ -74,3 +74,11 @@ void destroy(t_stack *stack) {
     free(stack->items);
     free(stack);
 }
+
+void clear(t_stack *stack) {
+    if (stack == NULL) {
+        return;
+    }
+
+    stack->top_index = -1;
+}
