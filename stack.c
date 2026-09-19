@@ -32,3 +32,18 @@ static void increase_array_size(t_stack *stack) {
     stack->items = new;
     stack->max = new_max;
 }
+
+int push(t_stack *stack, int elem) {
+    if (stack == NULL) {
+        return 0;
+    }
+
+    if (stack->top_index + 1 == stack->max) {
+        increase_array_size(stack);
+    }
+    
+    stack->top_index++;
+    stack->items[stack->top_index] = elem;
+
+    return 1;
+}
