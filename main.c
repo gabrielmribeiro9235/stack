@@ -112,6 +112,12 @@ int main() {
                 }
 
                 break;
+            case 8:
+                printf("-----------------------------------------------\n");
+
+                printf("Stack size: %d\n", size(stack));
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
