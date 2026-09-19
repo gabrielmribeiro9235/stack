@@ -92,6 +92,16 @@ int main() {
                 printf("The stack has been cleared\n");
 
                 break;
+            case 6:
+                printf("-----------------------------------------------\n");
+
+                if (is_empty(stack)) {
+                    printf("The stack is empty\n");
+                } else {
+                    printf("The stack is not empty\n");
+                }
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
