@@ -56,3 +56,12 @@ int pop(t_stack *stack, int *value) {
     *value = stack->items[stack->top_index--];
     return 1;
 }
+
+int top(t_stack *stack, int *value) {
+    if (stack == NULL || value == NULL || stack->top_index == -1) {
+        return 0;
+    }
+
+    *value = stack->items[stack->top_index];
+    return 1;
+}
