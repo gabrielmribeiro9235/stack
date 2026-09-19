@@ -26,16 +26,17 @@ t_stack* create_stack(int max) {
     return stack;
 }
 
-static void increase_array_size(t_stack *stack) {
+static int increase_array_size(t_stack *stack) {
     int new_max = stack->max * 2;
     int *new = realloc(stack->items, sizeof(int) * new_max);
 
     if (new == NULL) {
-        exit(1);
+        return 0;
     }
 
     stack->items = new;
     stack->max = new_max;
+    return 1;
 }
 
 int push(t_stack *stack, int elem) {
@@ -43,8 +44,8 @@ int push(t_stack *stack, int elem) {
         return 0;
     }
 
-    if (is_full(stack)) {
-        increase_array_size(stack);
+    if (is_full(stack) && !increase_array_size(stack)) {
+        return 0;
     }
     
     stack->top_index++;
