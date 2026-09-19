@@ -49,7 +49,7 @@ int push(t_stack *stack, int elem) {
 }
 
 int pop(t_stack *stack, int *value) {
-    if (stack == NULL || value == NULL || stack->top_index == -1) {
+    if (is_empty(stack) || value == NULL) {
         return 0;
     }
 
@@ -58,7 +58,7 @@ int pop(t_stack *stack, int *value) {
 }
 
 int top(t_stack *stack, int *value) {
-    if (stack == NULL || value == NULL || stack->top_index == -1) {
+    if (is_empty(stack) || value == NULL) {
         return 0;
     }
 
@@ -81,4 +81,8 @@ void clear(t_stack *stack) {
     }
 
     stack->top_index = -1;
+}
+
+int is_empty(t_stack *stack) {
+    return stack == NULL || stack->top_index == -1;
 }
