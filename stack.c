@@ -47,3 +47,12 @@ int push(t_stack *stack, int elem) {
 
     return 1;
 }
+
+int pop(t_stack *stack, int *value) {
+    if (stack == NULL || value == NULL || stack->top_index == -1) {
+        return 0;
+    }
+
+    *value = stack->items[stack->top_index--];
+    return 1;
+}
