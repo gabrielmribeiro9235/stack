@@ -38,7 +38,7 @@ int push(t_stack *stack, int elem) {
         return 0;
     }
 
-    if (stack->top_index + 1 == stack->max) {
+    if (is_full(stack)) {
         increase_array_size(stack);
     }
     
@@ -85,4 +85,8 @@ void clear(t_stack *stack) {
 
 int is_empty(t_stack *stack) {
     return stack == NULL || stack->top_index == -1;
+}
+
+int is_full(t_stack *stack) {
+    return stack == NULL || stack->top_index + 1 == stack->max;
 }
