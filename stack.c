@@ -5,7 +5,7 @@
 t_stack* create_stack(int max) {
     t_stack *stack = malloc(sizeof(t_stack));
 
-    if (stack == NULL) {
+    if (stack == NULL || max <= 0) {
         return NULL;
     }
 
