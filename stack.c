@@ -65,3 +65,12 @@ int top(t_stack *stack, int *value) {
     *value = stack->items[stack->top_index];
     return 1;
 }
+
+void destroy(t_stack *stack) {
+    if (stack == NULL) {
+        return;
+    }
+
+    free(stack->items);
+    free(stack);
+}
