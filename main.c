@@ -34,6 +34,16 @@ int main() {
         menu();
         scanf("%d", &opt);
 
+        switch (opt) {
+            case 1:
+                printf("-----------------------------------------------\n");
+                print(stack);
+                break;
+            default:
+                printf("-----------------------------------------------\n");
+                printf("Invalid choice\n");
+                break;
+        }
     } while (opt != 9);
 
     return 0;
