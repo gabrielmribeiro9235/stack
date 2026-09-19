@@ -102,6 +102,16 @@ int main() {
                 }
 
                 break;
+            case 7:
+                printf("-----------------------------------------------\n");
+
+                if (is_full(stack)) {
+                    printf("The stack is full\n");
+                } else {
+                    printf("The stack is not full\n");
+                }
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
