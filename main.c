@@ -18,6 +18,16 @@ void menu() {
 }
 
 int main() {
+    int stack_size;
+
+    printf("Enter the maximum initial stack size: ");
+    scanf("%d", &stack_size);
+
+    t_stack *stack = create_stack(stack_size);
+
+    if (stack == NULL) {
+        return 1;
+    }
 
     return 0;
 }
