@@ -118,12 +118,25 @@ int main() {
                 printf("Stack size: %d\n", size(stack));
 
                 break;
+            case 9:
+                printf("-----------------------------------------------\n");
+                printf("Leaving the program\n");
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
                 break;
         }
     } while (opt != 9);
+
+    printf("-----------------------------------------------\n");
+    printf("Freeing up memory\n");
+
+    destroy(stack);
+
+    printf("-----------------------------------------------\n");
+    printf("End of the program\n");
 
     return 0;
 }
