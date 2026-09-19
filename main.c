@@ -71,6 +71,20 @@ int main() {
 
                 break;
             }
+            case 4: {
+                printf("-----------------------------------------------\n");
+                int top_value;
+
+                int top_status = top(stack, &top_value);
+
+                if (top_status == 1) {
+                    printf("Top value: %d\n", top_value);
+                } else {
+                    printf("There is no top\n");
+                }
+
+                break;
+            }
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
