@@ -3,15 +3,20 @@
 #include"stack.h"
 
 t_stack* create_stack(int max) {
+    if (max <= 0) {
+        return NULL;
+    }
+
     t_stack *stack = malloc(sizeof(t_stack));
 
-    if (stack == NULL || max <= 0) {
+    if (stack == NULL) {
         return NULL;
     }
 
     stack->items = malloc(sizeof(int) * max);
 
     if (stack->items == NULL) {
+        free(stack);
         return NULL;
     }
 
