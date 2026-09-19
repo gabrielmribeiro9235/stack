@@ -85,6 +85,13 @@ int main() {
 
                 break;
             }
+            case 5:
+                printf("-----------------------------------------------\n");
+                clear(stack);
+
+                printf("The stack has been cleared\n");
+
+                break;
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
