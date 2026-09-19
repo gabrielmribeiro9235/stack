@@ -90,3 +90,7 @@ int is_empty(t_stack *stack) {
 int is_full(t_stack *stack) {
     return stack == NULL || stack->top_index + 1 == stack->max;
 }
+
+int size(t_stack *stack) {
+    return stack == NULL ? 0 : stack->top_index + 1;
+}
