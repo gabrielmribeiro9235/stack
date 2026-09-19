@@ -39,6 +39,24 @@ int main() {
                 printf("-----------------------------------------------\n");
                 print(stack);
                 break;
+            case 2: {
+                printf("-----------------------------------------------\n");
+
+                int elem;
+
+                printf("Enter the element you want to push: ");
+                scanf("%d", &elem);
+
+                int push_status = push(stack, elem);
+
+                if (push_status == 1) {
+                    printf("\n%d pushed successfully\n", elem);
+                } else {
+                    printf("\nFailed to push\n");
+                }
+
+                break;
+            }
             default:
                 printf("-----------------------------------------------\n");
                 printf("Invalid choice\n");
